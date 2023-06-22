@@ -1,0 +1,32 @@
+{
+  "name": "zanixon.db",
+  "version": "1.3.2",
+  "description": "A simple JSON database for javacsript node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "fs": "^0.0.1-security",
+    "numeral": "^2.0.6"
+  },
+  "keywords": [
+    "zanixon",
+    "database",
+    "json",
+    "jsondatabase",
+    "jsondb",
+    "db",
+    "json-database",
+    "easy-database",
+    "simple-database",
+    "easy-db",
+    "simple-db",
+    "zanixon-db",
+    "zanixondb",
+    "zanixon.db"
+  ],
+  "author": "ZTRdiamond",
+  "license": "ISC"
+}
