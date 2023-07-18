@@ -1,6 +1,8 @@
 # Zanixon Database
 A simple JSON databse for javascript node.js
 
+*Not recommended for big database system, bcuz this 
+
 ### All functions
 
 ```js
