@@ -1,28 +1,28 @@
 # Function: set()
 
-This function is used to save data into storage
+This function is used to store value data into storage that has registered paths
+
+```js
+db.set(varName, varValue, tableName, dbName, log);
+```
 
 ---
 ## Parameters
 
 | Parameter | Type | Status | Info | 
 | --- | --- | --- | --- | 
-| `varName` | string, integer | require | used as the key of the value |
-| `varValue` | string | require | for data value |
-| `tableName` | string | optional: default `null` | used to save your data inside table |
-| `dbName` | string | optional: default `null` | used to save your into registered storage path |
-| `log` | boolean | optional: default `true` | use to see error logs |
+| `varName` | string, integer | require | This param is used as the key for the value of the data |
+| `varValue` | string | require | this param will contain the data to be stored |
+| `tableName` | string | optional: default `null` | This param is used to store data into a json table |
+| `dbName` | string | optional: default `null` | This param is used to select the data storage path from all the paths listed, the default path is 'default' which will save the data to the db.json file in the database folder |
+| `log` | boolean | optional: default `true` | if this param is true, then an error log will appear when there is an error in the code or incorrect input |
 
 ## How to usage
 
 ```js
-db.set(
-    "foo",
-    "bar",
-    null, // set table as null to save the data default not inside in table
-    null, // set dbName as null to save the data into default storage
-    false
-)
+// not inside the table
+db.set("foo", "bar", null, null, false); // output: {"foo":"bar"}
 
-// output: {"foo":"bar"}
+// inside the table
+db.set("foo", "bar", "foobar", "default", false); // output: {"foobar":{"foo":"bar"}} - the data is saved in default storage
 ```
