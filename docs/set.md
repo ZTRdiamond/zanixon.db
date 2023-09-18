@@ -24,5 +24,5 @@ db.set(varName, varValue, tableName, dbName, log);
 db.set("foo", "bar", null, null, false); // output: {"foo":"bar"}
 
 // inside the table
-db.set("foo", "bar", "foobar", "default", false); // output: {"foobar":{"foo":"bar"}} - the data is saved in default storage
+db.set("foo", "bar", "foobar", "storage1", false); // output: {"foobar":{"foo":"bar"}} - the data is saved in storage1 path, you can see the path at storage.md docs
 ```
