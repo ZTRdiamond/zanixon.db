@@ -1,9 +1,9 @@
-# Function: set()
+# Function: storage()
 
 this function is used to create a storage path and will define the path into a customId
 
 ```js
-db.set({ data... });
+db.storage({ data... });
 ```
 
 ---

@@ -260,8 +260,8 @@ module.exports = {
       dbName = dbName ? dbName : "default";
       const path = this.databases[dbName];
       if (!path) {
-         log ? console.error(`ZanixonDB: `.zanixon, `Gagal menjalankan "has()": Database bernama "${dbName}" tidak ditemukan!`.error) : null;
-         return false;
+         log ? console.error(`ZanixonDB: `.zanixon, `Failed to execute "hasVar()" error at database: database named "${dbName}" is not found!`.error) : null;
+         return null;
       }
 
       let content = JSON.parse(fs.readFileSync(path, "utf8"));
@@ -274,8 +274,8 @@ module.exports = {
          return name in content;
       } else {
          if (!content[table]) {
-            log ? console.error(`ZanixonDB: `.zanixon, `Gagal menjalankan 'has()': Tabel bernama "${table}" tidak ditemukan di database '${dbName}'`.error) : null;
-            return false;
+            log ? console.error(`ZanixonDB: `.zanixon, `Failed to execute "has()" error at table: table named "${table}" is not found in database "${dbName}"`.error) : null;
+            return null;
          }
          return content[table].hasOwnProperty(name);
       }
@@ -290,14 +290,14 @@ module.exports = {
       }
       return JSON.stringify(JSON.parse(fs.readFileSync(path, "utf8")), null, 2);
    },
-   //has
-   hasVar: function hasVar(name, id, table = null, dbName = null, log = true) {
+   //hasVar
+   hasVar: function hasVar(id, name, table = null, dbName = null, log = true) {
       dbName = dbName ? dbName : "default";
-      let key = `${name}_${id}`;
+      let key = `${id}_${name}`;
       const path = this.databases[dbName];
       if (!path) {
-         log ? console.error(`ZanixonDB: `.zanixon, `Gagal menjalankan "has()": Database bernama "${dbName}" tidak ditemukan!`.error) : null;
-         return false;
+         log ? console.error(`ZanixonDB: `.zanixon, `Failed to execute "hasVar()" error at database: database named "${dbName}" is not found!`.error) : null;
+         return null;
       }
 
       let content = JSON.parse(fs.readFileSync(path, "utf8"));
@@ -310,8 +310,8 @@ module.exports = {
          return key in content;
       } else {
          if (!content[table]) {
-            log ? console.error(`ZanixonDB: `.zanixon, `Gagal menjalankan 'has()': Tabel bernama "${table}" tidak ditemukan di database '${dbName}'`.error) : null;
-            return false;
+            log ? console.error(`ZanixonDB: `.zanixon, `Failed to execute "has()" error at table: table named "${table}" is not found in database "${dbName}"`.error) : null;
+            return null;
          }
          return content[table].hasOwnProperty(key);
       }
