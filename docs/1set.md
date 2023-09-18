@@ -1,5 +1,8 @@
-# set(id, value, dbName, log);
+# Function: set()
 
+This function is used to save data into storage
+
+---
 ## Parameters
 
 | Parameter | Type | Status | Info | 
