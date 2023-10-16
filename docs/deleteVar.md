@@ -1,6 +1,6 @@
 # Function: deleteVar()
 
-This function is used to delete data with customId from storage that has registered paths
+Delete a specific data from storage with ID
 
 ```js
 db.deleteVar(id, varName, tableName, dbName, log);

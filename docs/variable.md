@@ -11,7 +11,7 @@ db.variable({ data... });
 
 | Parameter | Type | Status | Info | 
 | --- | --- | --- | --- | 
-| `{ "varName":"varValue" }` | JSON | require | used to make variable item |
+| `{ data... }` | JSON | require | used to make variable item |
 
 ## How to usage
 

@@ -1,6 +1,6 @@
 # Function: get()
 
-This function is used to get data value from storage that has registered paths
+get the data from storage
 
 ```js
 db.get(varName, tableName, dbName, log);

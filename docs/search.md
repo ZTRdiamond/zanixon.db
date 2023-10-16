@@ -1,6 +1,6 @@
 # Function: search()
 
-This function is used to search data value from storage that has registered paths
+Search specific data from storage
 
 ```js
 db.search(varName, tableName, dbName, log);

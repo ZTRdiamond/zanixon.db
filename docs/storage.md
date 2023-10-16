@@ -11,7 +11,7 @@ db.storage({ data... });
 
 | Parameter | Type | Status | Info | 
 | --- | --- | --- | --- | 
-| `{ "customId":"path?" }` | JSON | require | used to make dbName |
+| `{ data... }` | JSON | require | used to make dbName |
 
 ## How to usage
 

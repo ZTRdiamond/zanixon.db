@@ -1,6 +1,6 @@
 # Function: delete()
 
-This function is used to delete data from storage that has registered paths
+Delete a specific data from storage
 
 ```js
 db.delete(varName, tableName, dbName, log);

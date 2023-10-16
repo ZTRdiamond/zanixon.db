@@ -1,6 +1,6 @@
 # Function: getVar()
 
-This function is used to get data value with customId from storage that has registered paths
+Get the data from storage or get it from variable in storage with id
 
 ```js
 db.getVar(id, varName, tableName, dbName, log);

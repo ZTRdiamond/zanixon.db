@@ -1,6 +1,6 @@
 # Function: hasVar()
 
-This function is used to check data value with customId from storage that has registered paths
+Checking whether or not the data exists in storage with ID
 
 ```js
 db.hasVar(id, varName, tableName, dbName, log);

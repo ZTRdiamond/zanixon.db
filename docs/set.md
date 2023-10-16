@@ -1,6 +1,6 @@
 # Function: set()
 
-This function is used to store value data into storage that has registered paths
+Save the data to the storage or save it to variable in storage
 
 ```js
 db.set(varName, varValue, tableName, dbName, log);

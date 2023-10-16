@@ -1,6 +1,6 @@
 # Function: has()
 
-This function is used to check data value from storage that has registered paths
+Checking whether or not the data exists in storage
 
 ```js
 db.has(varName, tableName, dbName, log);

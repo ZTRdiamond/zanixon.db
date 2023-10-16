@@ -1,6 +1,6 @@
 # Function: setVar()
 
-This function is used to store value data with customId into storage that has registered paths
+Save the data to storage or save it to variable in storage with ID
 
 ```js
 db.setVar(id, varName, varValue, tableName, dbName, log);

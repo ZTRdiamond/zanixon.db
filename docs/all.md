@@ -1,6 +1,6 @@
 # Function: all()
 
-This function is used to get all data from storage
+Get all data from storage (Too much data can affect the speed of code execution!)
 
 ```js
 db.all(dbName);
