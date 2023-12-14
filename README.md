@@ -1,4 +1,4 @@
-# Zanixon Database
+# ZanixonDB
 A simple JSON database with ease use, You can use this database for your small games based on nodejs or you can use this database for other usage.
 
 The write and read speed is depending on the device you use, this module using fs to write and read data on JSON.
@@ -16,35 +16,18 @@ The write and read speed is depending on the device you use, this module using f
  ```js
  const zn = require("zanixon.db");
 
-zn.storage({
-    "games":"./database/games.json"
-});
+zn.storageInit({
+    "dir":"./data/main"
+})
+zn.storage();
  ```
  
 Now you can use this module to save and get your data from local database, this module must have write and read permission in device that running the module.
 
 I'm not recommend this module to organizing a bigger data because your data can corrupted and lost, this database i make to help me creating text-based game on whatsapp that running on my [whatsapp bot](https://github.com/ZTRdiamond/zanixon-wabot).
 
-# Functions
-This database has many functions to use
-- [storage()](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/storage.md)
-- [variable(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/variable.md)
-- [set(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/set.md)
-- [get(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/get.md)
-- [setVar(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/setVar.md)
-- [getVar(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/getVar.md)
-- [has(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/has.md)
-- [hasVar(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/hasVar.md)
-- [search(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/search.md)
-- [all(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/all.md)
-- [delete(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/delete.md)
-- [deleteVar(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/deleteVar.md)
-- [regEmoji(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/regEmoji.md)
-- [emoji(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/emoji.md)
-- [numberSeparator(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/numberSeparator.md)
-- [abbreviate(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/abbreviate.md)
-- [leaderboard(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/leaderboard.md)
-- [leaderboardPosition(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/leaderboardPosition.md)
-- [setCooldown(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/setCooldown.md)
-- [getCooldown(\)](https://github.com/ZTRdiamond/zanixon.db/blob/main/docs/getCooldown.md)
+# Documentation
+
+I will make the documentation later, for now I have not made the docs in detail and in this version `2.0.0` update there are quite a lot of changes so the previous docs are not relevant in my opinion, please check the code for each parameter and its use. thank you.
+
 ----
