@@ -155,7 +155,7 @@ module.exports = {
   		if(!isName) {
   			return {};
   		} else {
-  			return isNaN(content[name]) ? JSON.stringify(content[name], null, 2) :  content[name];
+  			return content[name];
   		}
   	} else {
   		if(!content[table]) return {};
