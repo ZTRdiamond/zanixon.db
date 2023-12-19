@@ -78,6 +78,7 @@ module.exports = {
   	let content = JSON.parse(fs.readFileSync(filePath, "utf8"));
   	for(const key in data) {
   		if(!content[key]) content[key] = data[key];
+  		if(content[key] != data[key]) content[key] = data[key];
   	}
   	fs.writeFileSync(filePath, JSON.stringify(content, null, 2));
 	},
