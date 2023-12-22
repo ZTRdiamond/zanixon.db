@@ -154,15 +154,15 @@ module.exports = {
   	if(table == null) {
   		let isName = this.has(name, table, dbName);
   		if(!isName) {
-  			return {};
+  			return undefined;
   		} else {
   			return content[name];
   		}
   	} else {
-  		if(!content[table]) return {};
+  		if(!content[table]) return undefined;
   		if(content[table][name] == undefined) {
   			if(!this.has(name, table, dbName)) {
-  				if(!this.has(name, null, dbName)) return {};
+  				if(!this.has(name, null, dbName)) return undefined;
   				return content[name];
   			}
   		} else return content[table][name];
@@ -184,8 +184,8 @@ module.exports = {
   	if(table == null) {
   		return content[name];
   	} else {
-  		if(!content[table]) return {};
-  		if(!content[table][key]) return {};
+  		if(!content[table]) return undefined;
+  		if(!content[table][key]) return undefined;
   		return content[table][name];
   	}
   },
