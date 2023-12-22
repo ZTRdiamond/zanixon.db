@@ -271,6 +271,7 @@ module.exports = {
   		delete content[table][name];
   		return true;
   	}
+  	fs.writeFileSync(filePath, JSON.stringify(content, null, 2));
   },
   deleteVar: function (id, name, table = null, dbName = null) {
   	dbName = dbName || "default";
@@ -293,6 +294,7 @@ module.exports = {
   		delete content[table][key];
   		return true;
   	}
+  	fs.writeFileSync(filePath, JSON.stringify(content, null, 2));
   },
   search: function (query, table = null, dbName = null) {
   	dbName = dbName || "default";
