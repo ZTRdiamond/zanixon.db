@@ -35,6 +35,7 @@ db.variables({
 	level: 1
 }, "user");
 
+db.set("haha", "iyah", null, "user")
 console.log("\nSet data using set test:", db.set("name", "Zanixon", null, "user"))
 console.log("\nSet data with id using setVar test:", db.setVar("123", "name", "Zanixonn", null, "user"));
 let money = db.get("money", null, "user");
@@ -43,7 +44,7 @@ console.log("\nSet integer using setVar test:", db.setVar("123", "money", Math.f
 console.log("\nGet data with getVar test:", db.getVar("123", "name", null, "user"));
 console.log("\nCheck a variable is available or not using has:", db.has("money", null, "user"));
 console.log("\nCheck a variable with id is available hasVar using hasVar:", db.hasVar("123", "money", null, "user"));
-console.log(`\nDelete data "level" using delete:`, db.delete("level", null, "user"));
+console.log(`\nDelete data "level" using delete:`, db.delete("haha", null, "user"), db.get("haha", null, "user"));
 console.log(`\nDelete data "undefined" using deleteVar:`, db.deleteVar("123", "level", null, "user"));
 console.log(`\nSearch "money" from db:`, db.search("name", null, "user"))
 console.log(`\nRegister emoji to db: { "nahh": "💀" }`); db.regEmoji({ nahh: "💀" });

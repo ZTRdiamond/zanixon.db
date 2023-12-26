@@ -261,17 +261,19 @@ module.exports = {
   	if(!isExists) throw new Error(`${colors.zanixon("ZanixonDB")} >> ${colors.error(`Can't open database file named "${dbName}" on path "${filePath}", Database file is not found!`)}`);
   	if(hasName < 0) throw new Error(`${colors.zanixon("ZanixonDB")} >> ${colors.error(`Can't read undefined data in the "name" parameter`)}`);
   	
+  	let status = null; 
   	let content = JSON.parse(fs.readFileSync(filePath, "utf8"));
   	if(table == null ) {
   		if(!content[name]) return false;
   		delete content[name];
-  		return true;
+  		status = true;
   	} else {
   		if(!content[table]) return false;
   		delete content[table][name];
-  		return true;
+  		status = true;
   	}
   	fs.writeFileSync(filePath, JSON.stringify(content, null, 2));
+  	return status;
   },
   deleteVar: function (id, name, table = null, dbName = null) {
   	dbName = dbName || "default";
@@ -283,18 +285,20 @@ module.exports = {
   	if(!isExists) throw new Error(`${colors.zanixon("ZanixonDB")} >> ${colors.error(`Can't open database file named "${dbName}" on path "${filePath}", Database file is not found!`)}`);
   	if(hasName < 0) throw new Error(`${colors.zanixon("ZanixonDB")} >> ${colors.error(`Can't read undefined data in the "name" parameter`)}`);
   	
+  	let status = null;
   	let content = JSON.parse(fs.readFileSync(filePath, "utf8"));
   	if(table == null ) {
   		if(!content[key]) return false;
   		delete content[key];
-  		return true;
+  		status = true;
   	} else {
   		if(!content[table]) return false;
   		if(!content[table][key]) return false;
   		delete content[table][key];
-  		return true;
+  		status = true;
   	}
   	fs.writeFileSync(filePath, JSON.stringify(content, null, 2));
+  	return status;
   },
   search: function (query, table = null, dbName = null) {
   	dbName = dbName || "default";
