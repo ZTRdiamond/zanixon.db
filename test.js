@@ -32,14 +32,18 @@ db.dbCheck("user");
 db.variables({
 	name: "none",
 	money: 0,
-	level: 1
+	level: 1,
+	key: 0,
+	obj: { key: 0 }
 }, "user");
 
 db.set("haha", "iyah", null, "user")
 console.log("\nSet data using set test:", db.set("name", "Zanixon", null, "user"))
 console.log("\nSet data with id using setVar test:", db.setVar("123", "name", "Zanixonn", null, "user"));
 let money = db.get("money", null, "user");
-console.log("\nSet integer using set test:", db.set("money", Math.floor(money + 1), null, "user"));
+console.log("Changed object key:", db.setKey("key", "newKey", null, "user"));
+console.log("Changed object key on nested json:", db.setKey("key", "newKey", "obj", "user"), db.all("user"))
+console.log("\nSet integer using set test:", db.set("money", Math.floor(money + 1), null, "user"), db.all("user"));
 console.log("\nSet integer using setVar test:", db.setVar("123", "money", Math.floor(money + 1), null, "user"));
 console.log("\nGet data with getVar test:", db.getVar("123", "name", null, "user"));
 console.log("\nCheck a variable is available or not using has:", db.has("money", null, "user"));
